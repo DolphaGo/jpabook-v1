@@ -1,4 +1,4 @@
-package com.jpabook.dolphago;
+package com.jpashop.dolphago;
 
 
 import org.assertj.core.api.Assertions;

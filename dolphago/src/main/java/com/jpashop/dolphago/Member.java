@@ -1,4 +1,4 @@
-package com.jpabook.dolphago;
+package com.jpashop.dolphago;
 
 import lombok.Getter;
 import lombok.Setter;

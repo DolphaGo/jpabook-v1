@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.jpabook'
+group = 'com.jpashop'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
