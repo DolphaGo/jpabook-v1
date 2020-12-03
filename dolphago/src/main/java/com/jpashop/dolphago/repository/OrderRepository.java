@@ -20,5 +20,14 @@ public class OrderRepository {
         return em.find(Order.class,id);
     }
 
-//    public List<Order> findAll(OrderSearch orderSearch){}
+    public List<Order> findAll(OrderSearch orderSearch){
+        //동적 쿼리는 QuaryDSL을 사용해서 해결하자~
+        return em.createQuery("select o from Order o join o.member m " +
+                "where o.status =: status "+
+                "and m.name like :name", Order.class)
+                .setParameter("status",orderSearch.getOrderStatus())
+                .setParameter("name",orderSearch.getMemberName())
+                .setMaxResults(1000)
+                .getResultList();
+    }
 }
