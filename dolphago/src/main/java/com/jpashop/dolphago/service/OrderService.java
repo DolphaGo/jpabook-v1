@@ -4,6 +4,7 @@ import com.jpashop.dolphago.domain.*;
 import com.jpashop.dolphago.repository.ItemRepository;
 import com.jpashop.dolphago.repository.MemberRepository;
 import com.jpashop.dolphago.repository.OrderRepository;
+import com.jpashop.dolphago.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,6 +54,8 @@ public class OrderService {
     }
 
     //검색
-//    public List<Order> findOrders(OrderSearch orderSearch){}
+    public List<Order> findOrders(OrderSearch orderSearch){
+        return orderRepository.findAllByString(orderSearch);
+    }
 
 }

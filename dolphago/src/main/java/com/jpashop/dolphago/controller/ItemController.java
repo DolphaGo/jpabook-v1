@@ -27,6 +27,7 @@ public class ItemController {
     @PostMapping("/items/new")
     public String create(BookForm form){
         //가급적 Setter는 사용하지 말 것. 예제이므로 사용하는 것 뿐.
+        //그리고 Entity와 Form은 분리하라.
         Book book=new Book();
         book.setName(form.getName());
         book.setPrice(form.getPrice());
